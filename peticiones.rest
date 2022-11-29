@@ -1,0 +1,51 @@
+GET http://localhost:3000/api/products
+
+###
+GET http://localhost:3000/api/products/available
+
+###
+GET http://localhost:3000/api/products/oficina
+
+###
+GET http://localhost:3000/api/products/min/30/max/100
+
+###
+GET http://localhost:3000/api/products/6384acaaf6b483f2f2888084
+
+
+//CLIENTES
+###
+GET http://localhost:3000/api/clients
+###
+
+//Agregarle un producto al cliente a traves de id
+GET http://localhost:3000/api/clients/6385f6737383252ed78c8dd1/product/638537749a0d589d6606481a
+###
+
+###
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "name":"Nombre",
+    "email":"elcorreo@gmail.com",
+    "address":"calle 1",
+    "age":10,
+    "active":"true"
+}
+//numero final del link es el id del cliente generado, hay que actualizarlo si se agrega otro
+###
+PUT http://localhost:3000/api/clients/6385ef0887d6a2aef55bc4bf
+Content-Type: application/json
+
+{
+    "age": 150,
+    "active": false
+}
+
+###
+DELETE http://localhost:3000/api/clients/6385ef0887d6a2aef55bc4bf
+
+
+### 
+GET https://c8c3-139-47-17-112.eu.ngrok.io/api/clients
